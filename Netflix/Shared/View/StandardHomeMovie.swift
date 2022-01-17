@@ -21,6 +21,10 @@ struct StandardHomeMovie: View {
 
 struct StandardHomeMovie_Previews: PreviewProvider {
     static var previews: some View {
-        StandardHomeMovie(movie: exampleMovie1)
+        ZStack {
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+            StandardHomeMovie(movie: exampleMovie1)
+        }
     }
 }
