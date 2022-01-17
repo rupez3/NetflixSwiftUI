@@ -7,8 +7,11 @@
 
 import Foundation
 import SwiftUI
+import Fakery
 
 // Mostly for testing
+
+let faker = Faker(locale: "nb-NO")
 
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
@@ -20,8 +23,8 @@ let exampleMovie1 = Movie(
     numberOfSeasons: 3,
     promotionHeadline: "Watch it soon!",
     defaultEpisodeInfo: exampleEpisodeInfo1,
-    creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    creators: faker.lorem.words(amount: 3),
+    cast: faker.lorem.words(amount: 4)
 )
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
@@ -33,7 +36,7 @@ let exampleMovie2 = Movie(
     promotionHeadline: "New coming soon",
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: faker.lorem.words(amount: 3)
 )
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -133,7 +136,12 @@ let exampleMovie10 = Movie(
     cast: "mark ruffalo patrick"
 )
 
-let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Piot", description: "Lorem Ipsum", season: 3, episode: 1)
+let exampleEpisodeInfo1 = CurrentEpisodeInfo(
+    episodeName: "Piot",
+    description: faker.lorem.sentences(amount: 3),
+    season: 1,
+    episode: 1
+)
 
 let exampleMovies = [
     exampleMovie1,

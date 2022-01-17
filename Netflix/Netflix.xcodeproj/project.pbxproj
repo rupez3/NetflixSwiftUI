@@ -819,8 +819,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vadymmarkov/Fakery";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 		82D5F8842795C9D600553982 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
