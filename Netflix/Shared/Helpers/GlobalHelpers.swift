@@ -10,16 +10,130 @@ import SwiftUI
 
 // Mostly for testing
 
-let exampleMovie1 = Movie(id: UUID().uuidString, name: "Foundation", thumbnailURL: URL(string: "https://picsum.photos/200/300")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie2 = Movie(id: UUID().uuidString, name: "Invasion", thumbnailURL: URL(string: "https://picsum.photos/200/301")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie3 = Movie(id: UUID().uuidString, name: "The Nevers", thumbnailURL: URL(string: "https://picsum.photos/200/302")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie4 = Movie(id: UUID().uuidString, name: "Dark", thumbnailURL: URL(string: "https://picsum.photos/200/303")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie5 = Movie(id: UUID().uuidString, name: "Space", thumbnailURL: URL(string: "https://picsum.photos/200/304")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie6 = Movie(id: UUID().uuidString, name: "Mummy", thumbnailURL: URL(string: "https://picsum.photos/200/305")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie7 = Movie(id: UUID().uuidString, name: "Cars", thumbnailURL: URL(string: "https://picsum.photos/200/306")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie8 = Movie(id: UUID().uuidString, name: "Prometheus", thumbnailURL: URL(string: "https://picsum.photos/200/307")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie9 = Movie(id: UUID().uuidString, name: "2012", thumbnailURL: URL(string: "https://picsum.photos/200/308")!, categories: ["Cool", "Exciting", "Recommended"])
-let exampleMovie10 = Movie(id: UUID().uuidString, name: "Extraction", thumbnailURL: URL(string: "https://picsum.photos/200/309")!, categories: ["Cool", "Exciting", "Recommended"])
+let exampleMovie1 = Movie(
+    id: UUID().uuidString,
+    name: "Foundation",
+    thumbnailURL: URL(string: "https://picsum.photos/200/300")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 3,
+    promotionHeadline: "Watch it soon!",
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie2 = Movie(
+    id: UUID().uuidString,
+    name: "Invasion",
+    thumbnailURL: URL(string: "https://picsum.photos/200/301")!,
+    categories: ["Cool", "Exciting", "Recommended"], year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 6,
+    promotionHeadline: "New coming soon",
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie3 = Movie(
+    id: UUID().uuidString,
+    name: "The Nevers",
+    thumbnailURL: URL(string: "https://picsum.photos/200/302")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 9,
+    promotionHeadline: "Recommeneded",
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie4 = Movie(
+    id: UUID().uuidString,
+    name: "Dark",
+    thumbnailURL: URL(string: "https://picsum.photos/200/303")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 1,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie5 = Movie(
+    id: UUID().uuidString,
+    name: "Space",
+    thumbnailURL: URL(string: "https://picsum.photos/200/304")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 2,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie6 = Movie(
+    id: UUID().uuidString,
+    name: "Mummy",
+    thumbnailURL: URL(string: "https://picsum.photos/200/305")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 5,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie7 = Movie(
+    id: UUID().uuidString,
+    name: "Cars",
+    thumbnailURL: URL(string: "https://picsum.photos/200/306")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 4,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie8 = Movie(
+    id: UUID().uuidString,
+    name: "Prometheus",
+    thumbnailURL: URL(string: "https://picsum.photos/200/307")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 8,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie9 = Movie(
+    id: UUID().uuidString,
+    name: "2012",
+    thumbnailURL: URL(string: "https://picsum.photos/200/308")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 7,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+let exampleMovie10 = Movie(
+    id: UUID().uuidString,
+    name: "Extraction",
+    thumbnailURL: URL(string: "https://picsum.photos/200/309")!,
+    categories: ["Cool", "Exciting", "Recommended"],
+    year: 2012,
+    rating: "TV/MA",
+    numberOfSeasons: 3,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "lore ipsom",
+    cast: "mark ruffalo patrick"
+)
+
+let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Piot", description: "Lorem Ipsum", season: 3, episode: 1)
 
 let exampleMovies = [
     exampleMovie1,

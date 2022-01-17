@@ -13,6 +13,8 @@ struct HorizontalButton: View {
     
     var imageName: String
     
+    var backgroundColor: Color = Color.white
+    
     var action: () -> Void
     
     var body: some View {
@@ -29,8 +31,8 @@ struct HorizontalButton: View {
                 Spacer()
             }
             .padding(.vertical, 6)
-            .foregroundColor(.black)
-            .background(Color.white)
+            .foregroundColor(backgroundColor == .white ? .black : .white)
+            .background(backgroundColor)
             .cornerRadius(3.0)
         }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8210DD6F2795FAF5006C57C5 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210DD6E2795FAF5006C57C5 /* Episode.swift */; };
+		8210DD702795FAF5006C57C5 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210DD6E2795FAF5006C57C5 /* Episode.swift */; };
 		82D5F85E2795C83100553982 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F85D2795C83100553982 /* Tests_iOS.swift */; };
 		82D5F8602795C83100553982 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F85F2795C83100553982 /* Tests_iOSLaunchTests.swift */; };
 		82D5F86A2795C83100553982 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F8692795C83100553982 /* Tests_macOS.swift */; };
@@ -36,6 +38,8 @@
 		82D5F8A22795E23F00553982 /* HorizontalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F8A02795E23F00553982 /* HorizontalButton.swift */; };
 		82D5F8A42795EEBC00553982 /* TopRowButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F8A32795EEBC00553982 /* TopRowButtons.swift */; };
 		82D5F8A52795EEBC00553982 /* TopRowButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F8A32795EEBC00553982 /* TopRowButtons.swift */; };
+		82D5F8A72795F39600553982 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F8A62795F39600553982 /* MovieDetailView.swift */; };
+		82D5F8A82795F39600553982 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D5F8A62795F39600553982 /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8210DD6E2795FAF5006C57C5 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		82D5F8452795C82F00553982 /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
 		82D5F8462795C82F00553982 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		82D5F8472795C83100553982 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		82D5F89D2795DD1800553982 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		82D5F8A02795E23F00553982 /* HorizontalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalButton.swift; sourceTree = "<group>"; };
 		82D5F8A32795EEBC00553982 /* TopRowButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowButtons.swift; sourceTree = "<group>"; };
+		82D5F8A62795F39600553982 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 				82D5F8452795C82F00553982 /* NetflixApp.swift */,
 				82D5F8462795C82F00553982 /* ContentView.swift */,
 				82D5F8812795C84500553982 /* HomeView.swift */,
+				82D5F8A62795F39600553982 /* MovieDetailView.swift */,
 				82D5F8962795CD2E00553982 /* ViewModel */,
 				82D5F88F2795CAEB00553982 /* Helpers */,
 				82D5F88B2795CA7700553982 /* View */,
@@ -179,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				82D5F8882795CA2500553982 /* Movie.swift */,
+				8210DD6E2795FAF5006C57C5 /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,6 +389,8 @@
 				82D5F8822795C84500553982 /* HomeView.swift in Sources */,
 				82D5F8982795CD4000553982 /* HomeVM.swift in Sources */,
 				82D5F86F2795C83100553982 /* ContentView.swift in Sources */,
+				82D5F8A72795F39600553982 /* MovieDetailView.swift in Sources */,
+				8210DD6F2795FAF5006C57C5 /* Episode.swift in Sources */,
 				82D5F8892795CA2500553982 /* Movie.swift in Sources */,
 				82D5F89B2795D7BA00553982 /* TopMoviePreview.swift in Sources */,
 				82D5F8942795CBA300553982 /* StandardHomeMovie.swift in Sources */,
@@ -399,6 +409,8 @@
 				82D5F8832795C84500553982 /* HomeView.swift in Sources */,
 				82D5F8992795CD4000553982 /* HomeVM.swift in Sources */,
 				82D5F8702795C83100553982 /* ContentView.swift in Sources */,
+				82D5F8A82795F39600553982 /* MovieDetailView.swift in Sources */,
+				8210DD702795FAF5006C57C5 /* Episode.swift in Sources */,
 				82D5F88A2795CA2500553982 /* Movie.swift in Sources */,
 				82D5F89C2795D7BA00553982 /* TopMoviePreview.swift in Sources */,
 				82D5F8952795CBA300553982 /* StandardHomeMovie.swift in Sources */,
