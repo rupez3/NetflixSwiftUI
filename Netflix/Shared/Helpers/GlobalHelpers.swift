@@ -137,8 +137,8 @@ let exampleMovie10 = Movie(
 )
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(
-    episodeName: "Piot",
-    description: faker.lorem.sentences(amount: 3),
+    episodeName: "Pilot",
+    description: faker.lorem.sentences(amount: 4),
     season: 1,
     episode: 1
 )
@@ -157,5 +157,15 @@ extension LinearGradient {
         startPoint: .top,
         endPoint: .bottom
     )
+    
+}
+
+extension String {
+    
+    func widthOfString(usingFont font: UIFont) -> CGFloat {
+        let fontAttr = [NSAttributedString.Key.font: font]
+        let size = self.size(withAttributes: fontAttr)
+        return size.width
+    }
     
 }
