@@ -9,6 +9,10 @@ import SwiftUI
 
 struct CustomTabSwitcher: View {
     
+    @State private var currentTab: CustomTab = .episodes
+    
+    var movie: Movie
+    
     var tabs: [CustomTab]
     
     func widthForTab(_ tab: CustomTab) -> CGFloat {
@@ -20,25 +24,36 @@ struct CustomTabSwitcher: View {
         VStack {
             //scrollable picker
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+                HStack(spacing: 20) {
                     ForEach(tabs, id: \.self) { tab in
                         VStack {
                             // red bar
                             Rectangle()
                                 .frame(width: widthForTab(tab), height: 6)
+                                .foregroundColor(tab == currentTab ? Color.red : Color.clear)
                             //button
                             Button {
-                                //
+                                currentTab = tab
                             } label: {
                                 Text("\(tab.rawValue)")
                                     .font(.system(size: 16, weight: .bold))
+                                    .foregroundColor(tab == currentTab ? Color.white : Color.gray)
                             }
+                            .buttonStyle(PlainButtonStyle())
+                            .frame(width: widthForTab(tab), height: 30)
                         }
                     }
                 }
             }
             // selected view
-            Text("Selected View")
+            switch currentTab {
+            case .episodes:
+                Text("Episodes")
+            case .trailers:
+                TrailerList(trailers: movie.trailers)
+            case .more:
+                MoreLikeThisView(movies: movie.moreLikeThis)
+            }
         }
         .foregroundColor(Color.white)
     }
@@ -55,7 +70,7 @@ struct CustomTabSwitcher_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabSwitcher(tabs: [.episodes, .trailers, .more])
+            CustomTabSwitcher(movie: exampleMovie3, tabs: [.episodes, .trailers, .more])
         }
     }
 }

@@ -13,6 +13,18 @@ import Fakery
 
 let faker = Faker(locale: "nb-NO")
 
+let exampleVideoURL1 = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4")!
+let exampleVideoURL2 = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4")!
+let exampleVideoURL3 = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4")!
+
+let exampleImageURL1 = URL(string: "https://picsum.photos/300/105")!
+let exampleImageURL2 = URL(string: "https://picsum.photos/300/106")!
+let exampleImageURL3 = URL(string: "https://picsum.photos/300/107")!
+
+let exampleTrailer1 = Trailer(name: "Season 3 trailer", videoURL: exampleVideoURL1, thumbnailImageURL: exampleImageURL1)
+let exampleTrailer2 = Trailer(name: "Dark ", videoURL: exampleVideoURL2, thumbnailImageURL: exampleImageURL2)
+let exampleTrailer3 = Trailer(name: "Black Friday", videoURL: exampleVideoURL3, thumbnailImageURL: exampleImageURL3)
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "Foundation",
@@ -24,7 +36,9 @@ let exampleMovie1 = Movie(
     promotionHeadline: "Watch it soon!",
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: faker.lorem.words(amount: 3),
-    cast: faker.lorem.words(amount: 4)
+    cast: faker.lorem.words(amount: 4),
+    moreLikeThis: exampleMovies,
+    trailers: [exampleTrailer1, exampleTrailer2, exampleTrailer3]
 )
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
@@ -36,7 +50,9 @@ let exampleMovie2 = Movie(
     promotionHeadline: "New coming soon",
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: faker.lorem.words(amount: 3)
+    cast: faker.lorem.words(amount: 3),
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -49,7 +65,9 @@ let exampleMovie3 = Movie(
     promotionHeadline: "Recommeneded",
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -61,7 +79,9 @@ let exampleMovie4 = Movie(
     numberOfSeasons: 1,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
@@ -73,7 +93,9 @@ let exampleMovie5 = Movie(
     numberOfSeasons: 2,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -85,7 +107,9 @@ let exampleMovie6 = Movie(
     numberOfSeasons: 5,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie7 = Movie(
     id: UUID().uuidString,
@@ -97,7 +121,9 @@ let exampleMovie7 = Movie(
     numberOfSeasons: 4,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie8 = Movie(
     id: UUID().uuidString,
@@ -109,7 +135,9 @@ let exampleMovie8 = Movie(
     numberOfSeasons: 8,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie9 = Movie(
     id: UUID().uuidString,
@@ -121,7 +149,9 @@ let exampleMovie9 = Movie(
     numberOfSeasons: 7,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 let exampleMovie10 = Movie(
     id: UUID().uuidString,
@@ -133,7 +163,9 @@ let exampleMovie10 = Movie(
     numberOfSeasons: 3,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "lore ipsom",
-    cast: "mark ruffalo patrick"
+    cast: "mark ruffalo patrick",
+    moreLikeThis: [],
+    trailers: []
 )
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(
@@ -143,12 +175,16 @@ let exampleEpisodeInfo1 = CurrentEpisodeInfo(
     episode: 1
 )
 
-let exampleMovies = [
-    exampleMovie1,
-    exampleMovie2,
-    exampleMovie3,
-    exampleMovie4,
-]
+var exampleMovies: [Movie] {
+    [
+        exampleMovie4,
+        exampleMovie5,
+        exampleMovie6,
+        exampleMovie8,
+        exampleMovie9,
+        exampleMovie10,
+    ].shuffled()
+}
 
 extension LinearGradient {
     

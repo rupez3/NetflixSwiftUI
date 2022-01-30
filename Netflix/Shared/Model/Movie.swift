@@ -56,6 +56,10 @@ struct Movie: Identifiable {
         }
     }
     
+    var moreLikeThis: [Movie]
+    
+    var trailers: [Trailer]
+    
 }
 
 struct CurrentEpisodeInfo: Hashable, Equatable {
